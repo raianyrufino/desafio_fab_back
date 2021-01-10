@@ -1,5 +1,3 @@
-# App
-
 Repositório do back-end da aplicação feita no desafio da Fabwork
 
 ## Instalação 
@@ -41,7 +39,7 @@ JWT_SECRET=SomeRandomString
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
-DB_PORT=5432
+DB_PORT=3306
 DB_DATABASE=
 DB_USERNAME=
 DB_PASSWORD=
