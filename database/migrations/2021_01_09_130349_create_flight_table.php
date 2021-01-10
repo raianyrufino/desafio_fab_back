@@ -16,8 +16,8 @@ class CreateFlightTable extends Migration
         Schema::create('flight', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('code');
-            $table->string('origin_id')->references('id')->on('location');
-            $table->string('destiny_id')->references('id')->on('location');
+            $table->bigInteger('origin_id')->references('id')->on('location');
+            $table->bigInteger('destiny_id')->references('id')->on('location');
             $table->dateTime('date_hour');
             $table->timestamps();
         });
