@@ -7,6 +7,8 @@ Clonagem do diretório:
 git clone https://github.com/raianyrufino/desafio_fab_back
 ```
 
+Acesse a raiz do projeto `cd desafio_fab_back`;
+
 Baixe as dependências do projeto via composer:
 ```
 composer update
