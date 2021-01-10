@@ -22,8 +22,8 @@ class FlightRepository extends BaseRepository
     public function findWithTimeDifference($date_hour_add_30, $date_hour_remove_30)
     {   
         return $this->model
-                    ->whereTime('date_hour', '>=', $date_hour_remove_30)
-                    ->whereTime('date_hour', '<=', $date_hour_add_30)
+                    ->where('date_hour', '>=', $date_hour_remove_30)
+                    ->where('date_hour', '<=', $date_hour_add_30)
                     ->first();
     }
 }

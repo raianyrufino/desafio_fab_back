@@ -27,7 +27,7 @@ class RegisterRequest extends BaseRequest
         return [
             'origin_id' => 'required', 
             'destiny_id' => 'required', 
-            'date_hour' => 'required|date_format:d/m/Y H:i:s',  
+            'date_hour' => 'required|date_format:Y-m-d H:i:s',
         ];
     }
 

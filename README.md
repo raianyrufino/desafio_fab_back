@@ -37,8 +37,6 @@ APP_DEBUG=true
 APP_KEY=SomeRandomString
 APP_URL=http://localhost
 
-JWT_SECRET=SomeRandomString
-
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
