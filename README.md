@@ -44,3 +44,6 @@ DB_DATABASE=
 DB_USERNAME=
 DB_PASSWORD=
 ```
+## Diagrama ER(Entindade Relacionamento)
+
+![diagrama er](./diagrama_desafio_fab.jpeg)
