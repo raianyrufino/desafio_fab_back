@@ -5,6 +5,7 @@ namespace App\Models\Services;
 use App\Models\Repositories\FlightRepository;
 use App\Exceptions\BusinessException;
 use Illuminate\Support\Str;
+use Carbon\Carbon;
 
 class FlightService
 {
@@ -85,11 +86,14 @@ class FlightService
 
         // Each flight must be at least 30 minutes apart from the other.
 
-        $date_hour_add_30 = date('Y-m-d H:i:s', strtotime('+31 minutes', strtotime($date_hour)));
-        $date_hour_remove_30 = date('Y-m-d H:i:s', strtotime('-31 minutes', strtotime($date_hour)));
+        $date_hour_add_30_str = date('Y-m-d H:i:s', strtotime('+30 minutes', strtotime($date_hour)));
+        $date_hour_remove_str = date('Y-m-d H:i:s', strtotime('-30 minutes', strtotime($date_hour)));
         
+        $date_hour_add_30 = Carbon::parse($date_hour_add_30_str);
+        $date_hour_remove_30 = Carbon::parse($date_hour_remove_str);
+
         $flight_with_difference_found = $this->flightRepository->findWithTimeDifference($date_hour_add_30, $date_hour_remove_30);
-        
+
         if ($flight_with_difference_found) {
             throw new BusinessException("Cada voo deve ter no mínimo 30 minutos de diferença do outro.", 406);
         }
