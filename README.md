@@ -44,6 +44,11 @@ DB_DATABASE=
 DB_USERNAME=
 DB_PASSWORD=
 ```
+## Executar Migrations
+```
+php artisan migrate
+```
+
 ## Diagrama ER(Entindade Relacionamento)
 
 ![diagrama er](./diagrama_desafio_fab.jpeg)
